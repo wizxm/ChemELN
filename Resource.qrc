@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/new/prefix1">
+    <file>res/close.png</file>
+    <file>res/maximize.png</file>
+    <file>res/minimize.png</file>
+    <file>res/options.png</file>
+  </qresource>
+</RCC>

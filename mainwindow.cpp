@@ -1,12 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
+
 
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
 	, ui(new Ui::MainWindow)
 {
 	setWindowFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-
+	QIcon icon;
+	icon.addFile(":/new/prefix1/close.png");
 	ui->setupUi(this);
 }
 
