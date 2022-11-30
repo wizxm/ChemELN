@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
+#include <QStyleOption>
+#include <QPainter>
 
 
 MainWindow::MainWindow(QWidget* parent)
@@ -16,6 +18,14 @@ MainWindow::MainWindow(QWidget* parent)
 MainWindow::~MainWindow()
 {
 	delete ui;
+}
+
+void MainWindow::paintEvent(QPaintEvent*)
+{
+	QStyleOption option;
+	option.init(this);
+	QPainter painter(this);
+	style()->drawPrimitive(QStyle::PE_Widget, &option, &painter, this);
 }
 
 void MainWindow::mousePressEvent(QMouseEvent* e)
